@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SSL_DOMAIN
 // @namespace    https://github.com/rixoye/demo_js
-// @version      0.3
+// @version      0.4
 // @description  输出ssl的查询结果
 // @author       rixoye
 // @include      https://crt.sh/?Identity=*
@@ -14,7 +14,7 @@
     setTimeout(() => {
         getDomain();
         addResult();
-    }, 2000);
+    }, 500);
     function getDomain(){
         const elements = document.querySelectorAll("table>tbody>tr>td>table tr td:nth-last-of-type(2)")
         if (elements.length > 0) {
