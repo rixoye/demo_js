@@ -13,6 +13,7 @@
     let domain_set = new Set();
     setTimeout(() => {
         getDomain();
+        addResult();
     }, 2000);
     function getDomain(){
         const elements = document.querySelectorAll("table>tbody>tr>td>table tr td:nth-last-of-type(2)")
@@ -37,8 +38,20 @@
             }
         }
 
-        for(let d of domain_set){
-            console.log(d);
-        }
+
     }
+
+
+    function addResult(){
+        let tbArea = document.getElementsByClassName("copyright");
+        let td = document.createElement("td");
+        td.className = "outer";
+        for(let d of domain_set){
+            var oLi = document.createElement('li');
+            td.appendChild(oLi);
+            oLi.innerHTML = d;
+        }
+        document.body.insertBefore(td,tbArea[0]);
+    }
+
 })();
