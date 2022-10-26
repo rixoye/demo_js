@@ -42,22 +42,24 @@
         }
         tbArea.insertBefore(td,tbArea.firstChild);
     }
-
-    let btnArea = document.getElementsByClassName("_1jbo  _4are")[0];
-    let btn = document.createElement("button");
-    let VEnable = true; 
-    btn.id = "addtb";
-    btn.textContent = VEnable ? "显示域名列表" : "移除域名列表";
-    btn.addEventListener("click", () => {
-        VEnable = !VEnable;
+    setTimeout(() => {
+        let btnArea = document.getElementsByClassName("_1jbo  _4are")[0];
+        let btn = document.createElement("button");
+        let VEnable = true; 
+        btn.id = "addtb";
         btn.textContent = VEnable ? "显示域名列表" : "移除域名列表";
-        if (VEnable) {
-            document.getElementById("domain_table").remove();
-        } else {
-            getDomain();
-            addResult();
-        }
-    });
+        btn.addEventListener("click", () => {
+            VEnable = !VEnable;
+            btn.textContent = VEnable ? "显示域名列表" : "移除域名列表";
+            if (VEnable) {
+                document.getElementById("domain_table").remove();
+            } else {
+                getDomain();
+                addResult();
+            }
+        });
     
-    btnArea.insertBefore(btn, null);
+        btnArea.insertBefore(btn, null);
+    }, 500);
+
 })();
