@@ -16,11 +16,15 @@
         const elements = document.getElementsByClassName("_4etw")
         if (elements.length > 0) {
             for (let i = 0; i < elements.length; i++) {
-                const raw = elements[i].childNodes[0].innerText;
+                let raw = elements[i].childNodes[0].innerText;
                 let sep = raw.indexOf("\n");
                 if (sep != -1) {
                     //有多个子域名
-                    domain_set.add(raw.slice(0,sep));
+                    while(sep!=-1){
+                        domain_set.add(raw.slice(0,sep));
+                        raw = raw.slice(sep+1,raw.length);
+                        sep = raw.indexOf("\n");
+                    }
                     domain_set.add(raw.slice(sep+1,raw.length));
                 }else{
                     //只有一个子域名
