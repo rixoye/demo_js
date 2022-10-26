@@ -58,5 +58,6 @@
             addResult();
         }
     });
+    
     btnArea.insertBefore(btn, null);
 })();
