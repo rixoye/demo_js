@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         facebook_ctSeach
 // @namespace    https://github.com/rixoye/demo_js
-// @version      0.4
+// @version      0.5
 // @description  输出ssl的查询结果
 // @author       rixoye
 // @include      https://developers.facebook.com/tools/ct/search/*
@@ -46,10 +46,11 @@
         }
         tbArea.insertBefore(td,tbArea.firstChild);
     }
+
     setTimeout(() => {
         let btnArea = document.getElementsByClassName("_1jbo  _4are")[0];
         let btn = document.createElement("button");
-        let VEnable = true; 
+        let VEnable = true;
         btn.id = "addtb";
         btn.textContent = VEnable ? "显示域名列表" : "移除域名列表";
         btn.addEventListener("click", () => {
@@ -62,7 +63,7 @@
                 addResult();
             }
         });
-    
+
         btnArea.insertBefore(btn, null);
     }, 3000);
 
