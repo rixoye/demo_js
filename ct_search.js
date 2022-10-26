@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         SSL_DOMAIN
+// @name         facebook_ctSeach
 // @namespace    https://github.com/rixoye/demo_js
-// @version      0.1
+// @version      0.2
 // @description  输出ssl的查询结果
 // @author       rixoye
 // @include      https://developers.facebook.com/tools/ct/search/*
