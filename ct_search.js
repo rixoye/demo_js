@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         facebook_ctSeach
 // @namespace    https://github.com/rixoye/demo_js
-// @version      0.3
+// @version      0.4
 // @description  输出ssl的查询结果
 // @author       rixoye
 // @include      https://developers.facebook.com/tools/ct/search/*
@@ -60,6 +60,6 @@
         });
     
         btnArea.insertBefore(btn, null);
-    }, 500);
+    }, 3000);
 
 })();
